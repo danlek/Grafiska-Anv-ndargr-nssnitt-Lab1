@@ -10,13 +10,14 @@ namespace Lab1
         private String first;
         private String second;
         private String third;
-        private Boolean gg = false;
-        
-        public dataNShit()
+        private logicNShit logic;
+
+        public dataNShit(logicNShit L)
         {
             first = "a";
             second = "b";
             third = "c";
+            logic = L;
         }
         public void setDataNShit(String data, int whichOne)
         { 
@@ -32,28 +33,21 @@ namespace Lab1
                     third = data;
                     break;
             }
-            connectTheDots();
-            
+            connectTheDots();  
         }
         public void connectTheDots()
         {
-            if(first == second && second == third && third == first)
+            if(first == second && second == third)
             {
-                gg = true;
-            }
-            
+                logic.GG();
+            } 
         }
+        
         public void purge()
         {
             first = "a";
             second = "b";
             third = "c";
-            gg = false;
         }
-        public Boolean andTheresTheGG()
-        {
-            return gg;
-        }
-
     }
 }

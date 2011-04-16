@@ -35,10 +35,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Razer Regular", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(69, 204);
+            this.label1.Font = new System.Drawing.Font("Razer Regular", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(29, 183);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 39);
+            this.label1.Size = new System.Drawing.Size(0, 35);
             this.label1.TabIndex = 0;
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
