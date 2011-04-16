@@ -1,0 +1,9 @@
+c:\users\danlek\documents\visual studio 2010\Projects\Lab1\Luffarschack\bin\Debug\Luffarschack.exe
+c:\users\danlek\documents\visual studio 2010\Projects\Lab1\Luffarschack\bin\Debug\Luffarschack.pdb
+c:\users\danlek\documents\visual studio 2010\Projects\Lab1\Luffarschack\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\danlek\documents\visual studio 2010\Projects\Lab1\Luffarschack\obj\x86\Debug\Luffarschack.Form1.resources
+c:\users\danlek\documents\visual studio 2010\Projects\Lab1\Luffarschack\obj\x86\Debug\Luffarschack.Properties.Resources.resources
+c:\users\danlek\documents\visual studio 2010\Projects\Lab1\Luffarschack\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\danlek\documents\visual studio 2010\Projects\Lab1\Luffarschack\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\danlek\documents\visual studio 2010\Projects\Lab1\Luffarschack\obj\x86\Debug\Luffarschack.exe
+c:\users\danlek\documents\visual studio 2010\Projects\Lab1\Luffarschack\obj\x86\Debug\Luffarschack.pdb

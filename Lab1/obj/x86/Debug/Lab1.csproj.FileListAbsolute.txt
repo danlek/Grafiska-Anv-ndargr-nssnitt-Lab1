@@ -1,0 +1,18 @@
+\\lifs\users$\danilekb100\my documents\visual studio 2010\Projects\Lab1\Lab1\bin\Debug\Lab1.exe
+\\lifs\users$\danilekb100\my documents\visual studio 2010\Projects\Lab1\Lab1\bin\Debug\Lab1.pdb
+\\lifs\users$\danilekb100\my documents\visual studio 2010\Projects\Lab1\Lab1\obj\x86\Debug\ResolveAssemblyReference.cache
+\\lifs\users$\danilekb100\my documents\visual studio 2010\Projects\Lab1\Lab1\obj\x86\Debug\Lab1.Form1.resources
+\\lifs\users$\danilekb100\my documents\visual studio 2010\Projects\Lab1\Lab1\obj\x86\Debug\Lab1.Properties.Resources.resources
+\\lifs\users$\danilekb100\my documents\visual studio 2010\Projects\Lab1\Lab1\obj\x86\Debug\GenerateResource.read.1.tlog
+\\lifs\users$\danilekb100\my documents\visual studio 2010\Projects\Lab1\Lab1\obj\x86\Debug\GenerateResource.write.1.tlog
+\\lifs\users$\danilekb100\my documents\visual studio 2010\Projects\Lab1\Lab1\obj\x86\Debug\Lab1.exe
+\\lifs\users$\danilekb100\my documents\visual studio 2010\Projects\Lab1\Lab1\obj\x86\Debug\Lab1.pdb
+C:\Users\danlek\documents\visual studio 2010\Projects\Lab1\Lab1\obj\x86\Debug\Lab1.exe
+C:\Users\danlek\documents\visual studio 2010\Projects\Lab1\Lab1\obj\x86\Debug\Lab1.pdb
+C:\Users\danlek\documents\visual studio 2010\Projects\Lab1\Lab1\bin\Debug\Lab1.exe
+C:\Users\danlek\documents\visual studio 2010\Projects\Lab1\Lab1\bin\Debug\Lab1.pdb
+C:\Users\danlek\documents\visual studio 2010\Projects\Lab1\Lab1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\danlek\documents\visual studio 2010\Projects\Lab1\Lab1\obj\x86\Debug\Lab1.Form1.resources
+C:\Users\danlek\documents\visual studio 2010\Projects\Lab1\Lab1\obj\x86\Debug\Lab1.Properties.Resources.resources
+C:\Users\danlek\documents\visual studio 2010\Projects\Lab1\Lab1\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\danlek\documents\visual studio 2010\Projects\Lab1\Lab1\obj\x86\Debug\GenerateResource.write.1.tlog
