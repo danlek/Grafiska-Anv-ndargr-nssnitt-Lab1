@@ -32,15 +32,16 @@ namespace Lab1
                 case 3:
                     third = data;
                     break;
-            }
-            connectTheDots();  
+            }  
         }
-        public void connectTheDots()
+        public Boolean connectTheDots()
         {
-            if(first == second && second == third)
+            Boolean connected = false;
+            if (first == second && second == third)
             {
-                logic.GG();
-            } 
+                connected = true;
+            }
+            return connected;
         }
         
         public void purge()

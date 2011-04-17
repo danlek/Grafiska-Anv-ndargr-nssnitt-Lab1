@@ -18,7 +18,6 @@ namespace Lab1
         //6 = diag1
         //7 = diag2
         private dataNShit[] dataz;
-        private int turn = 1;
         private Form1 F1;
         private int counter = 0;
         public logicNShit(Form1 F)
@@ -32,10 +31,11 @@ namespace Lab1
         }
         public String gameLogic(int vilkenKnapp, String knappTexten)
         {
-            String answer = " ";
+            String answer = knappTexten;
+            
             if (knappTexten == " ")
             {
-                if (turn == 1)
+                if (counter % 2 == 0)
                 {
                     answer = "O";
                     switch (vilkenKnapp)
@@ -46,13 +46,17 @@ namespace Lab1
                             dataz[3].setDataNShit("O", 1);
                             
                             dataz[6].setDataNShit("O", 1);
+
+                            isDraw("036");
                             
                             break;
                         case 1:
                             dataz[0].setDataNShit("O", 2);
                             
                             dataz[4].setDataNShit("O", 1);
-                            
+
+                            isDraw("04");
+
                             break;
                         case 2:
                             dataz[0].setDataNShit("O", 3);
@@ -60,12 +64,16 @@ namespace Lab1
                             dataz[5].setDataNShit("O", 1);
                             
                             dataz[7].setDataNShit("O", 1);
+
+                            isDraw("057");
                             
                             break;
                         case 3:
                             dataz[1].setDataNShit("O", 1);
                             
                             dataz[3].setDataNShit("O", 2);
+
+                            isDraw("13");
                             
                             break;
                         case 4:
@@ -76,12 +84,16 @@ namespace Lab1
                             dataz[6].setDataNShit("O", 2);
                             
                             dataz[7].setDataNShit("O", 2);
+
+                            isDraw("1467");
                             
                             break;
                         case 5:
                             dataz[1].setDataNShit("O", 3);
                             
                             dataz[5].setDataNShit("O", 2);
+
+                            isDraw("15");
                             
                             break;
                         case 6:
@@ -90,12 +102,16 @@ namespace Lab1
                             dataz[3].setDataNShit("O", 3);
                             
                             dataz[7].setDataNShit("O", 3);
+
+                            isDraw("237");
                             
                             break;
                         case 7:
                             dataz[2].setDataNShit("O", 2);
                             
                             dataz[4].setDataNShit("O", 3);
+
+                            isDraw("24");
                             
                             break;
                         case 8:
@@ -104,6 +120,8 @@ namespace Lab1
                             dataz[5].setDataNShit("O", 3);
                             
                             dataz[6].setDataNShit("O", 3);
+
+                            isDraw("256");
                             
                             break;
                     }
@@ -120,12 +138,16 @@ namespace Lab1
                             dataz[3].setDataNShit("X", 1);
                             
                             dataz[6].setDataNShit("X", 1);
-                            
+
+                            isDraw("036");
+
                             break;
                         case 1:
                             dataz[0].setDataNShit("X", 2);
                             
                             dataz[4].setDataNShit("X", 1);
+
+                            isDraw("04");
                             
                             break;
                         case 2:
@@ -134,12 +156,16 @@ namespace Lab1
                             dataz[5].setDataNShit("X", 1);
                             
                             dataz[7].setDataNShit("X", 1);
+
+                            isDraw("057");
                             
                             break;
                         case 3:
                             dataz[1].setDataNShit("X", 1);
                             
                             dataz[3].setDataNShit("X", 2);
+
+                            isDraw("13");
                             
                             break;
                         case 4:
@@ -150,12 +176,16 @@ namespace Lab1
                             dataz[6].setDataNShit("X", 2);
                             
                             dataz[7].setDataNShit("X", 2);
+
+                            isDraw("1467");
                             
                             break;
                         case 5:
                             dataz[1].setDataNShit("X", 3);
                             
                             dataz[5].setDataNShit("X", 2);
+
+                            isDraw("15");
                             
                             break;
                         case 6:
@@ -164,12 +194,16 @@ namespace Lab1
                             dataz[3].setDataNShit("X", 3);
                             
                             dataz[7].setDataNShit("X", 3);
+
+                            isDraw("237");
                             
                             break;
                         case 7:
                             dataz[2].setDataNShit("X", 2);
                             
                             dataz[4].setDataNShit("X", 3);
+
+                            isDraw("24");
                             
                             break;
                         case 8:
@@ -178,18 +212,18 @@ namespace Lab1
                             dataz[5].setDataNShit("X", 3);
                             
                             dataz[6].setDataNShit("X", 3);
+
+                            isDraw("256");
                             
                             break;
                     }
 
                 }
                 counter++;
-                isDraw();
-                turn = turn * (-1);
             }
             else 
             {
-                answer = " ";
+
             }
             return answer;
         }
@@ -199,12 +233,12 @@ namespace Lab1
             {
                 dataz[j].purge();
             }
-            turn = 1;
+            counter = 0;
         }
         
         public void GG()
         {
-            if (turn == 1)
+            if (counter%2 == 0)
             {
                 F1.inactivateButtons();
                 F1.changeText("Game Over\nO vinner!");
@@ -215,15 +249,29 @@ namespace Lab1
                 F1.changeText("Game Over\nX vinner!");
             }
         }
-        public void isDraw()
+        public void isDraw(String vilkaIndex)
         { 
-            //Kollar så det är inte oavgjort
-            if (counter == 9)
+            Boolean connected = false;
+            for (int i = 0; i < vilkaIndex.Length; i++)
             {
-                F1.inactivateButtons();
-                F1.changeText("Game Over\nOavgjort!");
+                int a = int.Parse(Convert.ToString(vilkaIndex[i]));
+                connected = dataz[a].connectTheDots();
+                if (connected == true)
+                {
+                    GG();
+                    break;
+                }
             }
-
+            Boolean isFull = F1.isFull();
+            if (counter == 8 && connected == false)
+            {
+                Draw();
+            }
+        }
+        public void Draw()
+        {
+            F1.inactivateButtons();
+            F1.changeText("Game Over\nOavgjort!");
         }
        
     }

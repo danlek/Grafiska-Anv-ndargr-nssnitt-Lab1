@@ -49,6 +49,7 @@ namespace Lab1
             int denKlickadeKnappen = Convert.ToInt32(temp.Name);
             String knappensText = knappar[denKlickadeKnappen].Text;
             knappar[denKlickadeKnappen].Text = logic.gameLogic(denKlickadeKnappen, knappensText);
+            
         }
         public void button1_Click(object sender, EventArgs e)
         {
@@ -78,6 +79,19 @@ namespace Lab1
         public void changeText(String outPut)
         {
             label1.Text = outPut;
+        }
+        public Boolean isFull()
+        {
+            Boolean full = true;
+            for (int a = 0; a < knappar.Length; a++ )
+            {
+                if (knappar[a].Text == " ")
+                { 
+                    //inte fullt än
+                    full = false;
+                }
+            }
+            return full;
         }
     }
 }
