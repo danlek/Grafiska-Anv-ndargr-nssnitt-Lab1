@@ -10,14 +10,12 @@ namespace Lab1
         private String first;
         private String second;
         private String third;
-        private logicNShit logic;
 
-        public dataNShit(logicNShit L)
+        public dataNShit()
         {
             first = "a";
             second = "b";
             third = "c";
-            logic = L;
         }
         public void setDataNShit(String data, int whichOne)
         { 

@@ -26,198 +26,109 @@ namespace Lab1
             dataz = new dataNShit[8];
             for (int i = 0; i < dataz.Length; i++)
             {
-                   dataz[i] = new dataNShit(this);
+                   dataz[i] = new dataNShit();
             }
         }
         public String gameLogic(int vilkenKnapp, String knappTexten)
         {
-            String answer = knappTexten;
+            String texten = knappTexten;
             
             if (knappTexten == " ")
             {
                 if (counter % 2 == 0)
                 {
-                    answer = "O";
-                    switch (vilkenKnapp)
-                    {
-                        case 0:
-                            dataz[0].setDataNShit("O", 1);
-                            
-                            dataz[3].setDataNShit("O", 1);
-                            
-                            dataz[6].setDataNShit("O", 1);
-
-                            isDraw("036");
-                            
-                            break;
-                        case 1:
-                            dataz[0].setDataNShit("O", 2);
-                            
-                            dataz[4].setDataNShit("O", 1);
-
-                            isDraw("04");
-
-                            break;
-                        case 2:
-                            dataz[0].setDataNShit("O", 3);
-                            
-                            dataz[5].setDataNShit("O", 1);
-                            
-                            dataz[7].setDataNShit("O", 1);
-
-                            isDraw("057");
-                            
-                            break;
-                        case 3:
-                            dataz[1].setDataNShit("O", 1);
-                            
-                            dataz[3].setDataNShit("O", 2);
-
-                            isDraw("13");
-                            
-                            break;
-                        case 4:
-                            dataz[1].setDataNShit("O", 2);
-                            
-                            dataz[4].setDataNShit("O", 2);
-                            
-                            dataz[6].setDataNShit("O", 2);
-                            
-                            dataz[7].setDataNShit("O", 2);
-
-                            isDraw("1467");
-                            
-                            break;
-                        case 5:
-                            dataz[1].setDataNShit("O", 3);
-                            
-                            dataz[5].setDataNShit("O", 2);
-
-                            isDraw("15");
-                            
-                            break;
-                        case 6:
-                            dataz[2].setDataNShit("O", 1);
-                            
-                            dataz[3].setDataNShit("O", 3);
-                            
-                            dataz[7].setDataNShit("O", 3);
-
-                            isDraw("237");
-                            
-                            break;
-                        case 7:
-                            dataz[2].setDataNShit("O", 2);
-                            
-                            dataz[4].setDataNShit("O", 3);
-
-                            isDraw("24");
-                            
-                            break;
-                        case 8:
-                            dataz[2].setDataNShit("O", 3);
-                            
-                            dataz[5].setDataNShit("O", 3);
-                            
-                            dataz[6].setDataNShit("O", 3);
-
-                            isDraw("256");
-                            
-                            break;
-                    }
-
+                    texten = "O";
                 }
                 else
                 {
-                    answer = "X";
-                    switch (vilkenKnapp)
-                    {
-                        case 0:
-                            dataz[0].setDataNShit("X", 1);
-                            
-                            dataz[3].setDataNShit("X", 1);
-                            
-                            dataz[6].setDataNShit("X", 1);
+                    texten = "X";
+                }
+                switch (vilkenKnapp)
+                {
+                    case 0:
+                        dataz[0].setDataNShit(texten, 1);
 
-                            isDraw("036");
+                        dataz[3].setDataNShit(texten, 1);
 
-                            break;
-                        case 1:
-                            dataz[0].setDataNShit("X", 2);
-                            
-                            dataz[4].setDataNShit("X", 1);
+                        dataz[6].setDataNShit(texten, 1);
 
-                            isDraw("04");
-                            
-                            break;
-                        case 2:
-                            dataz[0].setDataNShit("X", 3);
-                            
-                            dataz[5].setDataNShit("X", 1);
-                            
-                            dataz[7].setDataNShit("X", 1);
+                        isDraw("036");
 
-                            isDraw("057");
-                            
-                            break;
-                        case 3:
-                            dataz[1].setDataNShit("X", 1);
-                            
-                            dataz[3].setDataNShit("X", 2);
+                        break;
+                    case 1:
+                        dataz[0].setDataNShit(texten, 2);
 
-                            isDraw("13");
-                            
-                            break;
-                        case 4:
-                            dataz[1].setDataNShit("X", 2);
-                            
-                            dataz[4].setDataNShit("X", 2);
-                            
-                            dataz[6].setDataNShit("X", 2);
-                            
-                            dataz[7].setDataNShit("X", 2);
+                        dataz[4].setDataNShit(texten, 1);
 
-                            isDraw("1467");
-                            
-                            break;
-                        case 5:
-                            dataz[1].setDataNShit("X", 3);
-                            
-                            dataz[5].setDataNShit("X", 2);
+                        isDraw("04");
 
-                            isDraw("15");
-                            
-                            break;
-                        case 6:
-                            dataz[2].setDataNShit("X", 1);
-                            
-                            dataz[3].setDataNShit("X", 3);
-                            
-                            dataz[7].setDataNShit("X", 3);
+                        break;
+                    case 2:
+                        dataz[0].setDataNShit(texten, 3);
 
-                            isDraw("237");
-                            
-                            break;
-                        case 7:
-                            dataz[2].setDataNShit("X", 2);
-                            
-                            dataz[4].setDataNShit("X", 3);
+                        dataz[5].setDataNShit(texten, 1);
 
-                            isDraw("24");
-                            
-                            break;
-                        case 8:
-                            dataz[2].setDataNShit("X", 3);
-                            
-                            dataz[5].setDataNShit("X", 3);
-                            
-                            dataz[6].setDataNShit("X", 3);
+                        dataz[7].setDataNShit(texten, 1);
 
-                            isDraw("256");
-                            
-                            break;
-                    }
+                        isDraw("057");
 
+                        break;
+                    case 3:
+                        dataz[1].setDataNShit(texten, 1);
+
+                        dataz[3].setDataNShit(texten, 2);
+
+                        isDraw("13");
+
+                        break;
+                    case 4:
+                        dataz[1].setDataNShit(texten, 2);
+
+                        dataz[4].setDataNShit(texten, 2);
+
+                        dataz[6].setDataNShit(texten, 2);
+
+                        dataz[7].setDataNShit(texten, 2);
+
+                        isDraw("1467");
+
+                        break;
+                    case 5:
+                        dataz[1].setDataNShit(texten, 3);
+
+                        dataz[5].setDataNShit(texten, 2);
+
+                        isDraw("15");
+
+                        break;
+                    case 6:
+                        dataz[2].setDataNShit(texten, 1);
+
+                        dataz[3].setDataNShit(texten, 3);
+
+                        dataz[7].setDataNShit(texten, 3);
+
+                        isDraw("237");
+
+                        break;
+                    case 7:
+                        dataz[2].setDataNShit(texten, 2);
+
+                        dataz[4].setDataNShit(texten, 3);
+
+                        isDraw("24");
+
+                        break;
+                    case 8:
+                        dataz[2].setDataNShit(texten, 3);
+
+                        dataz[5].setDataNShit(texten, 3);
+
+                        dataz[6].setDataNShit(texten, 3);
+
+                        isDraw("256");
+
+                        break;
                 }
                 counter++;
             }
@@ -225,7 +136,7 @@ namespace Lab1
             {
 
             }
-            return answer;
+            return texten;
         }
         public void Reset()
         {
